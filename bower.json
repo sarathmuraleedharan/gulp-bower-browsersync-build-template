@@ -1,0 +1,45 @@
+{
+  "version": "0.0.0",
+  "name": "sample-ui-app",
+  "appPath": "src/",
+  "testPath": "src/test/javascript/spec",
+  "dependencies": {
+    "angular": "1.5.5",
+    "components-font-awesome": "^4.6.3",
+    "bootstrap": "^3.3.7"
+  },
+  "authors": [
+    "sarath <sarathmuraledharan@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "homepage": "",
+  "main": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "overrides": {
+    "angular": {
+      "main": [
+        "angular.min.js"
+      ]
+    },
+    "jquery": {
+      "main": [
+        "dist/jquery.min.js"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.min.js",
+        "dist/css/bootstrap.min.css",
+        "less/bootstrap.less"
+      ]
+    }
+  }
+}
