@@ -12,23 +12,60 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- endinject -->
     <!-- endbuild -->
-    <!-- inject:css:main -->
-    <link rel="stylesheet" href="content/css/main.css">
-    <!-- endinject:main -->
-    <!-- inject:css:vendor -->
+    <!-- build:css content/css/main.css -->
+    <!-- css:vendor -->
     <link rel="stylesheet" href="content/css/vendor.css">
-    <!-- endinject:vendor -->
+    <!-- end:vendor -->
+    <!-- css:main -->
+    <link rel="stylesheet" href="content/css/main.css">
+    <!-- end:main -->
     <!-- endbuild -->
 
 </head>
-<body>
+<body ng-app="sampleApp">
 
-<a href="#" class="btn btn-primary" style="margin: 10px;">Hello</a>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">Sample Template</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+                <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Account <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container" style="margin-top: 70px;">
+    <ui-view></ui-view>
+</div> <!-- /container -->
+
 
 <!-- build:js app/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- endinject -->
 <!-- endbuild -->
@@ -36,7 +73,7 @@
 <!-- build:js app/app.js  -->
 <!-- inject:js -->
 <script src="app/app.module.js"></script>
-<script src="app/home/home.controller.js"></script>
+<script src="app/app.route.js"></script>
 <script src="app/app.constants.js"></script>
 <!-- endinject -->
 <!-- endbuild -->

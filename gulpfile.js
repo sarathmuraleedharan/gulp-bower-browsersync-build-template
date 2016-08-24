@@ -99,8 +99,8 @@ gulp.task('inject:css:main', function () {
     return gulp.src(config.app + 'index.html')
         .pipe(inject(gulp.src(config.app + 'content/css/main.css'), {
             relative: true,
-            starttag: '<!-- inject:css:main -->',
-            endtag: '<!-- endinject:main -->'
+            starttag: '<!-- css:main -->',
+            endtag: '<!-- end:main -->'
         }))
         .pipe(gulp.dest(config.app))
 });
@@ -110,8 +110,8 @@ gulp.task('inject:css:vendor', function () {
     return gulp.src(config.app + 'index.html')
         .pipe(inject(gulp.src(config.app + 'content/css/vendor.css'), {
             relative: true,
-            starttag: '<!-- inject:css:vendor -->',
-            endtag: '<!-- endinject:vendor -->'
+            starttag: '<!-- css:vendor -->',
+            endtag: '<!-- end:vendor -->'
         }))
         .pipe(gulp.dest(config.app))
 });
@@ -178,7 +178,7 @@ gulp.task('html', function () {
     return gulp.src(config.app + 'app/**/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(templateCache({
-            module: 'civilApp',
+            module: 'sampleApp',
             root: 'app/',
             moduleSystem: 'IIFE'
         }))
@@ -187,7 +187,7 @@ gulp.task('html', function () {
 
 gulp.task('ngconstant:dev', function () {
     return ngConstant({
-        name: 'civilApp',
+        name: 'sampleApp',
         constants: {
             VERSION: util.parseVersion(),
             DEBUG_INFO_ENABLED: true
@@ -201,7 +201,7 @@ gulp.task('ngconstant:dev', function () {
 
 gulp.task('ngconstant:prod', function () {
     return ngConstant({
-        name: 'civilApp',
+        name: 'sampleApp',
         constants: {
             VERSION: util.parseVersion(),
             DEBUG_INFO_ENABLED: false

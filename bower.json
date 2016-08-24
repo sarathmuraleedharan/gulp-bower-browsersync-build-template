@@ -6,7 +6,8 @@
   "dependencies": {
     "angular": "1.5.5",
     "components-font-awesome": "^4.6.3",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "angular-ui-router": "ui-router#^0.3.1"
   },
   "authors": [
     "sarath <sarathmuraledharan@gmail.com>"
