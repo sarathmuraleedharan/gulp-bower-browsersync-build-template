@@ -1,5 +1,3 @@
-'use strict';
-
 var gulp = require('gulp'),
     util = require('./utils'),
     url = require('url'),
@@ -54,8 +52,9 @@ module.exports = function () {
         port: config.port,
         server: {
             baseDir: config.app
+            //middleware: proxies
         }
     });
 
     gulp.start('watch');
-};
+}

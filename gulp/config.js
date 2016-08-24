@@ -1,13 +1,14 @@
-'use strict';
-
 module.exports = {
     app: 'src/',
-    dist: 'dist/',
-    swaggerDist: 'dist/swagger-ui/',
+    dist: 'build/www/',
     test: 'src/test/javascript/',
+    scss: 'src/scss/',
+    sassSrc: 'src/scss/**/*.{scss,sass}',
+    sassVendor: 'src/scss/vendor.scss',
+    cssDir: 'src/content/css',
     bower: 'src/bower_components/',
-    tmp: 'tmp',
-    revManifest: 'dist/tmp/rev-manifest.json',
+    tmp: 'build/tmp',
+    revManifest: 'build/tmp/rev-manifest.json',
     port: 9000,
     apiPort: 8080,
     liveReloadPort: 35729,

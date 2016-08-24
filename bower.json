@@ -34,11 +34,15 @@
         "dist/jquery.min.js"
       ]
     },
+    "components-font-awesome": {
+      "main": [
+        "scss/font-awesome.scss"
+      ]
+    },
     "bootstrap": {
       "main": [
         "dist/js/bootstrap.min.js",
-        "dist/css/bootstrap.min.css",
-        "less/bootstrap.less"
+        "dist/css/bootstrap.min.css"
       ]
     }
   }
